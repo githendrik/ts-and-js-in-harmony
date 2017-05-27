@@ -1,6 +1,8 @@
 {
     "compilerOptions": {
-        "module": "es6",
-        "moduleResolution": "node"
+        "module": "amd",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "sourceMap": true
     }
 }
