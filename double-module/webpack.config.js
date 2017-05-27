@@ -13,5 +13,13 @@ module.exports = {
             { test: /\.ts$/, loader: 'ts-loader' }
         ]
     },
+    externals: {
+        "lodash": { // so we don't bundle this, but rather have it as a peerDependency
+            commonjs: "lodash",
+            commonjs2: "lodash",
+            amd: "lodash",
+            root: "_"
+        }
+    },
     devtool: 'source-map'
 }

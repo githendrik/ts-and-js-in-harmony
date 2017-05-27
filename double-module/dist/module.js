@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
+		module.exports = factory(require("lodash"));
 	else if(typeof define === 'function' && define.amd)
-		define([], factory);
+		define(["lodash"], factory);
 	else {
-		var a = factory();
+		var a = typeof exports === 'object' ? factory(require("lodash")) : factory(root["_"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function() {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -81,12 +81,15 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
+
 var Component = (function () {
     function Component(foo) {
         this.foo = foo;
     }
     Component.prototype.getFoo = function () {
-        return this.foo;
+        return __WEBPACK_IMPORTED_MODULE_0_lodash__["upperCase"](this.foo);
     };
     return Component;
 }());
@@ -109,6 +112,12 @@ function doStuff() {
 }
 
 
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
 
 /***/ })
 /******/ ]);

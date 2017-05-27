@@ -1,3 +1,5 @@
+import * as _ from "lodash"; // Listed as peerDependency, and added as external to webpack.config
+
 export default class Component {
     private foo : string;
 
@@ -6,6 +8,6 @@ export default class Component {
     }
 
     getFoo() {
-        return this.foo;
+        return _.upperCase(this.foo);
     }
 }
