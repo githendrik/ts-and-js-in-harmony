@@ -13,6 +13,8 @@ A Typescript project that consumes the double-module, uses it in conjunction wit
 - webpack
 - typescript
 - ts-loader
+- source-map-loader (load library sourcemaps into main project)
+- externals for library (don't bundle peerDependencies inside `double-module`)
 
 ## How to use
 - check out this repo
