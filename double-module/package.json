@@ -14,5 +14,5 @@
     "scripts": {
         "start": "webpack"
     },
-    "typings": "dist/src/Module.d.ts"
+    "typings": "typings/Module.d.ts"
 }
