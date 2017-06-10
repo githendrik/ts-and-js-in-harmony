@@ -9,7 +9,8 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.ts$/, loader: 'ts-loader' }, // Compile TS to JS
+            { test: /\.ts$/, use: 'ts-loader' }, // Compile TS to JS
+            { test: /\.css$/, use: ['style-loader', 'css-loader'] }, // Handle css imports
             { test: /\.js$/, use: ["source-map-loader"], enforce: "pre" } // Extract Source maps from libraries!
         ]
     },

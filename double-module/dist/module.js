@@ -7,7 +7,7 @@
 		var a = typeof exports === 'object' ? factory(require("lodash")) : factory(root["_"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_2__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_3__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -73,51 +73,63 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
- // Listed as peerDependency, and added as external to webpack.config
-var Component = (function () {
-    function Component(foo) {
-        this.foo = foo;
-    }
-    Component.prototype.getFoo = function () {
-        return __WEBPACK_IMPORTED_MODULE_0_lodash__["upperCase"](this.foo);
-    };
-    return Component;
-}());
-/* harmony default export */ __webpack_exports__["a"] = (Component);
-
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "doStuff", function() { return doStuff; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Component__ = __webpack_require__(0);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Component", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Component__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
+ // Listed as peerDependency, and added as external to webpack.config
+var TsClass = (function () {
+    function TsClass(field) {
+        this.field = field;
+    }
+    TsClass.prototype.getField = function () {
+        return __WEBPACK_IMPORTED_MODULE_0_lodash__["upperCase"](this.field);
+    };
+    return TsClass;
+}());
+/* harmony default export */ __webpack_exports__["a"] = (TsClass);
 
-function doStuff() {
-    var myComponent = new __WEBPACK_IMPORTED_MODULE_0__components_Component__["a" /* default */]('bar');
-    return myComponent.getFoo();
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tsFn", function() { return tsFn; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Component_styles__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Component_styles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Component_styles__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Component__ = __webpack_require__(1);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "TsClass", function() { return __WEBPACK_IMPORTED_MODULE_1__components_Component__["a"]; });
+// Styles
+
+// Pass-Through
+
+// Own things
+function tsFn(fnParam) {
+    var myComponent = new __WEBPACK_IMPORTED_MODULE_1__components_Component__["a" /* default */]("TsClass" + fnParam);
+    return myComponent.getField();
 }
 
 
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
+module.exports = __WEBPACK_EXTERNAL_MODULE_3__;
 
 /***/ })
 /******/ ]);

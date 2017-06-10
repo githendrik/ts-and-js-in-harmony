@@ -1,11 +1,9 @@
-import {Component, doStuff} from "double-module";
+import {tsFn, TsClass} from 'double-module';
 
-export function doMoreStuff() {
-    let boing : string = 'hello';
+export function myTsFn() {
+    console.log('myTsFn:');
 
-    console.log(boing);
-    const doStuffResult : string = doStuff();
-    const myComponent = new Component('yay');
-    const gettingFoo : string = myComponent.getFoo();
-    console.log(gettingFoo);
+    console.log(tsFn(123));
+    const myComponent = new TsClass('instanceName');
+    console.log(myComponent.getField());
 }

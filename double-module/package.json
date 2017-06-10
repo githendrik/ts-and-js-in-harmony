@@ -2,7 +2,10 @@
     "name": "double-module",
     "version": "1.0.0",
     "main": "dist/module.js",
+    "module": "index.js",
     "devDependencies": {
+        "css-loader": "^0.28.4",
+        "extract-text-webpack-plugin": "^2.1.2",
         "ts-loader": "^2.1.0",
         "typescript": "^2.3.3",
         "webpack": "^2.6.1"

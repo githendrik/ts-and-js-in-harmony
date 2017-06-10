@@ -1,8 +1,5 @@
-import { doMoreStuff } from './myTsThing'
-import Boing from './myJsThing';
+import { myTsFn } from './myTsThing'
+import myJsFn from './myJsThing';
 
-console.log('hi');
-
-console.log(Boing());
-
-doMoreStuff();
+myJsFn();
+myTsFn();

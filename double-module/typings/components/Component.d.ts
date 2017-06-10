@@ -1,5 +1,5 @@
-export default class Component {
-    private foo;
-    constructor(foo: string);
-    getFoo(): string;
+export default class TsClass {
+    private field;
+    constructor(field: string);
+    getField(): string;
 }

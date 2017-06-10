@@ -1,12 +1,9 @@
-const { doStuff, Component } = require('double-module');
+const { tsFn, TsClass } = require('double-module'); // same as import
 
-export default function Boing() {
+export default function MyJsFn() {
+    console.log('MyJsFn:');
 
-    const foo = doStuff();
-    console.log(foo);
-
-    const myComponent = new Component(); // no type checking. Will call new Component with undefined!
-    console.log(myComponent);
-
-    return 'whaaaat!';
+    console.log(tsFn(123));
+    const myComponent = new TsClass('instanceName');
+    console.log(myComponent.getField());
 }

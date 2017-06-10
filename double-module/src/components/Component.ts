@@ -1,13 +1,13 @@
 import * as _ from "lodash"; // Listed as peerDependency, and added as external to webpack.config
 
-export default class Component {
-    private foo : string;
+export default class TsClass {
+    private field : string;
 
-    constructor(foo : string) {
-        this.foo = foo;
+    constructor(field : string) {
+        this.field = field;
     }
 
-    getFoo() {
-        return _.upperCase(this.foo);
+    getField() {
+        return _.upperCase(this.field);
     }
 }

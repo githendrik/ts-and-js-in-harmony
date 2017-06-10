@@ -1,8 +1,13 @@
-import Component from './components/Component'
+// Styles
+import './components/Component.styles'
 
-function doStuff() {
-    const myComponent = new Component('bar');
-    return myComponent.getFoo();
+// Pass-Through
+import TsClass from './components/Component'
+
+// Own things
+function tsFn(fnParam : number) {
+    const myComponent = new TsClass(`TsClass${fnParam}`);
+    return myComponent.getField();
 }
 
-export {doStuff, Component}
+export {tsFn, TsClass}

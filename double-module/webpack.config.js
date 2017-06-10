@@ -1,3 +1,5 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 module.exports = {
     entry: './src/Module.ts',
     output: {
@@ -6,19 +8,21 @@ module.exports = {
         libraryTarget: 'umd'
     },
     resolve: {
-        extensions: ['.ts', '.js']
+        extensions: ['.ts', '.js', '.scss']
     },
     module: {
         rules: [
-            { test: /\.ts$/, loader: 'ts-loader' }
+            { test: /\.ts$/, use: 'ts-loader' },
+            { test: /\.scss$/, use: ExtractTextPlugin.extract({ use: 'css-loader' }) }
         ]
     },
+    plugins: [new ExtractTextPlugin('styles.css')],
     externals: {
-        "lodash": { // so we don't bundle this, but rather have it as a peerDependency
-            commonjs: "lodash",
-            commonjs2: "lodash",
-            amd: "lodash",
-            root: "_"
+        'lodash': { // so we don't bundle this, but rather have it as a peerDependency
+            commonjs: 'lodash',
+            commonjs2: 'lodash',
+            amd: 'lodash',
+            root: '_'
         }
     },
     devtool: 'source-map'
