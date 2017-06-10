@@ -1,4 +1,4 @@
-const { tsFn, TsClass } = require('double-module'); // same as import
+const { tsFn, TsClass } = require('double-module'); // umd ftw!
 
 export default function MyJsFn() {
     console.log('MyJsFn:');
